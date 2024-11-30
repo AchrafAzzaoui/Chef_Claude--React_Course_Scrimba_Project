@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+  border: 1px solid black;
+}
+.header .logo {
+  margin-right: 1.2em;
+  flex: 1;
+}
+.header .title {
+  font-weight: 300;
+  flex: 4;
+}

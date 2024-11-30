@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+body {
+  background-color: #fafaf8;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.6);
+}
+.header .logo {
+  margin-right: 1.2em;
+}
+.header .logo img {
+  max-width: 45px;
+}
+.header .title {
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.inner-container {
+  max-width: 45em; /* Same calculation */
+  width: calc(45em * 0.825); /* Ratio applied */
+  margin: 0 auto;
+  padding: 1.5em; /* Maintain consistent padding */
+}
+/* Form styling for add ingredient form */
+
+.add-ingredient-form {
+  padding: 4em 0;
+}
+
+.add-ingredient-form .form-group {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.add-ingredient-form .form-group input {
+  width: 37.125rem;
+  border-radius: 6px;
+}
