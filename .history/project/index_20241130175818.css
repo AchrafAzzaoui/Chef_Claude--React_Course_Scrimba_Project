@@ -28,7 +28,7 @@ body {
 
 .main-container {
   /* max-width: 45em; Same calculation */
-  max-width: calc(100em * 0.825); /* Ratio applied */
+  width: calc(69em * 0.825); /* Ratio applied */
   margin: 0 auto;
   padding: 1.5em; /* Maintain consistent padding */
 }
