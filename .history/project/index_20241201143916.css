@@ -1,12 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Inter";
 }
 body {
   background-color: #fafaf8;
-  line-height: 1.5;
-  box-sizing: border-box;
 }
 .header {
   display: flex;
@@ -16,7 +15,7 @@ body {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 .header .logo {
-  margin-right: 1em;
+  margin-right: 1.2em;
 }
 .header .logo img {
   max-width: 45px;
@@ -27,24 +26,27 @@ body {
 }
 
 .main-container {
+  /* max-width: 45em; Same calculation */
   max-width: 720px;
   width: calc(596 / 720 * 100%);
   margin: 0 auto;
-  padding: 1.5em 0em;
+  padding: 1.5em; /* Maintain consistent padding */
+  border: 1px solid black;
 }
 /* Form styling for add ingredient form */
 
 .add-ingredient-form {
-  padding: 3em 0;
-  width: 100%;
+  padding: 0;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .add-ingredient-form .form-group {
+  padding: 1em;
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   gap: 12px;
-  width: 100%;
 }
 
 .add-ingredient-form .form-group input {
@@ -56,7 +58,6 @@ body {
 
 .add-ingredient-form .form-group button {
   padding: 0.75em 1.875em;
-  font-family: Inter, sans-serif;
   flex: 1;
   border-radius: 6px;
   background-color: black;

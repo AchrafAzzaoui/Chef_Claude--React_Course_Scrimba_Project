@@ -3,7 +3,7 @@ export default function Form() {
     <form className="add-ingredient-form">
       <div className="form-group">
         <input type="text" placeholder="e.g. oregano" />
-        <button type="submit">+ Add Ingredient</button>
+        <button type="submit">Add Ingredient</button>
       </div>
     </form>
   );
