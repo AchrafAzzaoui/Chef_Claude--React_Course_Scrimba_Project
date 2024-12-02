@@ -9,12 +9,8 @@ export default function Main() {
     setIngredients((prevIngredients) => [...prevIngredients, ingredient]);
   }
 
-  let ingredientsHTML = ingredients.map((ingredient, index) => {
-    return (
-      <li>
-        {index + 1}: {ingredient}
-      </li>
-    );
+  ingredientsHTML = ingredients.map((ingredient) => {
+    return <li>{ingredient}</li>;
   });
 
   return (

@@ -12,7 +12,7 @@ export default function Main() {
   let ingredientsHTML = ingredients.map((ingredient, index) => {
     return (
       <li>
-        {index + 1}: {ingredient}
+        {index}: {ingredient}
       </li>
     );
   });

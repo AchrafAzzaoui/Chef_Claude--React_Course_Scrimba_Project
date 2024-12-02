@@ -9,18 +9,9 @@ export default function Main() {
     setIngredients((prevIngredients) => [...prevIngredients, ingredient]);
   }
 
-  let ingredientsHTML = ingredients.map((ingredient, index) => {
-    return (
-      <li>
-        {index + 1}: {ingredient}
-      </li>
-    );
-  });
-
   return (
     <main className="main-container">
-      <Form addIngredient={addIngredient} />
-      <ul>{ingredientsHTML}</ul>
+      <Form />
     </main>
   );
 }
