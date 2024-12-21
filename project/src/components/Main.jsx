@@ -2,25 +2,28 @@
 import { useState } from "react";
 // Component imports
 import Form from "./Form";
-
+import Ingredients from "./Ingredients";
+import GetRecipe from "./GetRecipe";
+import Recipe from "./Recipe";
 export default function Main() {
   const [ingredients, setIngredients] = useState([]);
+  const [recipe, setRecipe] = useState("");
   function addIngredient(ingredient) {
     setIngredients((prevIngredients) => [...prevIngredients, ingredient]);
   }
 
-  let ingredientsHTML = ingredients.map((ingredient, index) => {
-    return (
-      <li key={ingredient}>
-        {index + 1}: {ingredient}
-      </li>
-    );
-  });
-
   return (
     <main className="main-container">
       <Form addIngredient={addIngredient} />
-      <ul>{ingredientsHTML}</ul>
+      {ingredients.length > 0 && (
+        <section className="ingredient-section">
+          <Ingredients ingredients={ingredients} />
+          {ingredients.length > 2 && (
+            <GetRecipe ingredients={ingredients} setRecipe={setRecipe} />
+          )}
+        </section>
+      )}
+      {recipe && <Recipe recipe={recipe} />}
     </main>
   );
 }

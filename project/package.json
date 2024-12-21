@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "cd server && node index.js",
+    "install-all": "npm install && cd server && npm install"
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

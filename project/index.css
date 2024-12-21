@@ -65,3 +65,92 @@ body {
   cursor: pointer;
   border: 1px solid #d1d5db;
 }
+
+/* Ingredients List styling */
+
+.ingredient-section h2 {
+  text-align: left;
+}
+
+.ingredients-list {
+  margin-bottom: 48px;
+  max-width: 100%;
+  list-style-position: inside;
+}
+.ingredients-list li:before {
+  content: "";
+  margin-left: -0.5rem;
+}
+.ingredients-list li {
+  color: #475467;
+  line-height: 36px;
+  padding: 0;
+}
+
+/* Get recipe section styling */
+
+.get-recipe-container {
+  display: flex;
+  padding: 2.45rem;
+  border-radius: 5px;
+  background-color: #f0efeb;
+  justify-content: space-between;
+  max-width: 100%;
+  align-items: center;
+}
+
+.get-recipe-instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.get-recipe-button {
+  background-color: #d17557;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.875rem;
+  cursor: pointer;
+}
+
+/* Claude Recipe styling */
+
+.suggested-recipe-container {
+  color: #475467;
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 3em;
+  padding: 0 0em;
+}
+
+.suggested-recipe-container h2 {
+  margin-bottom: 1.5em;
+  color: #1f2937;
+  font-size: 1.5em;
+}
+
+.suggested-recipe-container h3 {
+  margin: 2em 0 1em;
+  color: #374151;
+}
+
+.suggested-recipe-container ul,
+.suggested-recipe-container ol {
+  list-style-position: inside;
+  margin: 1em 0;
+  padding-left: 1em;
+}
+
+.suggested-recipe-container ul li,
+.suggested-recipe-container ol li {
+  margin-bottom: 1em;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.suggested-recipe-container p {
+  margin: 1em 0;
+}

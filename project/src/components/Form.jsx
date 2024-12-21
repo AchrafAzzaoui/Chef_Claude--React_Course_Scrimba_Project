@@ -3,6 +3,7 @@ export default function Form(props) {
     event.preventDefault();
     const input = event.target.querySelector("input");
     const ingredient = input.value;
+    if (!ingredient) return;
     input.value = "";
     props.addIngredient(ingredient);
   }
