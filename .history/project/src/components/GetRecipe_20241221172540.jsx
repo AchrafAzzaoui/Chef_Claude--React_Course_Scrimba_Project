@@ -14,10 +14,7 @@ export default function GetRecipe({ ingredients, setRecipe }) {
       body: JSON.stringify({ ingredients }),
     };
     try {
-      const response = await fetch(
-        "https://chef-claude-recipe-generator.onrender.com/api/generateRecipe",
-        requestOptions
-      );
+      const response = await fetch("/api/generateRecipe", requestOptions);
       const data = await response.json();
       setRecipe(data.recipe);
     } catch (error) {
