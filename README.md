@@ -9,22 +9,18 @@ Chef Claude is an AI-powered recipe generator that helps you create recipes from
 - Real-time recipe generation
 
 ## Tech Stack
-- **Frontend:** React + Vite
-- **Backend:** Express.js
-- **AI:** Claude 3 Haiku
-- **Styling:** Custom CSS
+- **Frontend:** React + Vite  
+- **Backend:** Express.js  
+- **AI:** Claude 3 Haiku  
+- **Styling:** Custom CSS  
 
-## Getting Started
+## How to Use
+1. Visit the live app: [Chef Claude - Recipe Generator](https://chef-claude-recipe-generator.vercel.app).
+2. Add your available ingredients using the input field.
+3. Click **"Get a Recipe"** to generate a recipe tailored to your ingredients.
+4. View your custom AI-generated recipe, including ingredients and instructions.
 
-### Prerequisites
-- Node.js (v18 or higher)
-- npm
-- Claude API key
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/chef-claude.git
-   cd chef-claude
-
+## Notes
+- This app uses Claude AI for recipe generation, which may include additional ingredients to enhance the recipe.
+- The backend is powered by Express.js and hosted on Render.
+- The frontend is built with React and hosted on Vercel.
