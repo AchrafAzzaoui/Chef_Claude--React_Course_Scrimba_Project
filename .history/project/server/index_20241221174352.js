@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
-import rateLimit from "express-rate-limit";
+import rateLimit from 'express-rate-limit';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const envPath = path.join(__dirname, ".env");
@@ -15,22 +15,20 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const allowedOrigins = [
-  "https://chef-claude-recipe-generator.vercel.app/",
-  "https://your-netlify-app.netlify.app",
+  'http://localhost:5174',
+  'https://your-netlify-app.netlify.app'
 ];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 
 app.use(express.json());
 
@@ -71,17 +69,17 @@ app.post("/api/generateRecipe", async (req, res) => {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "../dist")));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Handle React routing, return all requests to React app
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../dist/index.html"));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Add rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  max: 100 // limit each IP to 100 requests per windowMs
 });
 
 // Apply to all routes
@@ -94,8 +92,8 @@ const MONTHLY_LIMIT = 1000; // Adjust based on your needs
 app.use((req, res, next) => {
   monthlyRequests++;
   if (monthlyRequests > MONTHLY_LIMIT) {
-    return res.status(429).json({
-      error: "Monthly limit reached. Service will reset next month.",
+    return res.status(429).json({ 
+      error: 'Monthly limit reached. Service will reset next month.' 
     });
   }
   next();
@@ -105,15 +103,15 @@ const startServer = () => {
   try {
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
-      console.log("API Key present:", !!process.env.CLAUDE_API_KEY);
+      console.log('API Key present:', !!process.env.CLAUDE_API_KEY);
     });
   } catch (error) {
-    if (error.code === "EADDRINUSE") {
+    if (error.code === 'EADDRINUSE') {
       console.log(`Port ${PORT} is busy, trying ${PORT + 1}`);
       PORT = PORT + 1;
       startServer();
     } else {
-      console.error("Server error:", error);
+      console.error('Server error:', error);
     }
   }
 };
