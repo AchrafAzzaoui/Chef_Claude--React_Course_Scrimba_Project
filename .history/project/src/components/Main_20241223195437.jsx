@@ -16,12 +16,6 @@ export default function Main() {
     setIngredients((prevIngredients) => [...prevIngredients, ingredient]);
   }
 
-  useEffect(() => {
-    if (recipeSectionRef.current && recipe) {
-      recipeSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [recipe]);
-
   return (
     <main className="main-container">
       <Form addIngredient={addIngredient} />
