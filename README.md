@@ -16,7 +16,7 @@ Chef Claude is an AI-powered recipe generator that helps you create recipes from
 
 ## How to Use
 1. Visit the live app: [Chef Claude - Recipe Generator](https://chef-claude-recipe-generator.vercel.app).
-2. Add your available ingredients using the input field.
+2. Add your available ingredients using the input field (at least three).
 3. Click **"Get a Recipe"** to generate a recipe tailored to your ingredients.
 4. View your custom AI-generated recipe, including ingredients and instructions.
 
